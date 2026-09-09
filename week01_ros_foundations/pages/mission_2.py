@@ -163,6 +163,8 @@ def _run_trial(name: str, linear_x: float, angular_z: float, duration: float) ->
         return False, f"The trial could not start: {error}"
     output = "\n".join(part.strip() for part in (stdout, stderr) if part.strip())
     if process is None or process.returncode != 0:
+        if "ExternalShutdownException" in output or "publisher's context is invalid" in output:
+            return False, "ROS stopped the trial before complete motion and stop measurements were saved. Confirm that the simulation is still running, then run this trial again."
         return False, output or f"The trial exited with code {process.returncode if process else 'unknown'}."
     return True, output or "The trial completed and its evidence was saved."
 
