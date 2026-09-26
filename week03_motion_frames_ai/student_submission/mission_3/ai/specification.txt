@@ -1,0 +1,9 @@
+Sequence: Robot drives four forward arcs, each of radius 0.3m in the specific order: +45 degrees (left), -45 degrees (right), +45 degrees (left), -45 degrees (right). Nah arc is 45 degrees (or 0.785 rad - theta - turning angle) and 0.3*0.785 =0.236 m long. The robot ends facing its initial direction
+Speed:  linear.x must stay within 0.22 m/s and  angular.z must stay within 0.8 rad/s. (chosen speed 0.15m/s and 0.5 rad/s - in the middle)
+Stopping behavior: after the last arc the robot pushes a zero velocity command and stops
+Success criteria: ideal pose relative to the start: +45-45+45-45 = 0 -> robot is facing its start direction; 
+Total path = 4*0.236 =0.944 
+Arch length = r*theta = 0.3*0.785=0.236 
+t = 0.785/0.5=1.57 
+Each arch moves the robot by: dx = 0.3 *sin(45) = 0.212m; dy = 0.3*(1-cos(45)) =0.088m
+4 arcs: x = 4*0.212 =0.848; y = 4*0.088 =0.352, so ideal pose is (0.85, 0.35, 0)

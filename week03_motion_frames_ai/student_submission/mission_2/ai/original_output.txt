@@ -1,0 +1,14 @@
+The node subscribes to PointStamped detections, uses tf2 to transform each one into base_link at the detection's timestamp, and republishes the result. It needs tf2_ros and tf2_geometry_msgs (sudo apt install ros-$ROS_DISTRO-tf2-geometry-msgs).
+Because a hallway camera is fixed in the building rather than mounted on the robot, the transform has to pass through the world frame: camera → map → odom → base_link. Localization (e.g. AMCL/Nav2) and odometry usually provide the last two links. You need to supply the camera's pose in the map yourself, for example:
+bash
+ros2 run tf2_ros static_transform_publisher \
+  --x 5.2 --y 1.0 --z 2.5 --roll 0 --pitch 0.6 --yaw 3.14 \
+  --frame-id map --child-frame-id hallway_camera_optical_frame
+To run it:
+bash
+python3 hallway_point_to_base_link.py --ros-args -p target_frame:=base_link
+
+A few notes on the design:
+- Timestamp handling. The node first transforms using the detection's own timestamp, because the robot keeps moving after the image is captured. If that timestamp falls outside the TF cache, which often happens when the camera's clock isn't synced, it falls back to the latest transform and logs a warning.
+- Configuration. The topic and frame names are ROS parameters, so you can match them to your detector without editing the code.
+- Accuracy. The result can only be as accurate as the robot's localization in map, plus your calibration of the camera's pose.

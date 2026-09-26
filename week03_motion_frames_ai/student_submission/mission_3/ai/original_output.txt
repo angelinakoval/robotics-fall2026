@@ -1,0 +1,12 @@
+build_pattern("alternating_arcs") now returns four segments in the order left, right, left, right. Each one is (0.15, ±0.5, 1.57). The Segment class, the module docstring and the wrapper are unchanged. All 20 tests pass locally.
+Checking the numbers
+Radius: v/ω = 0.15/0.5 = 0.30 m.
+Turn per arc: ω·t = 0.5 × 1.57 = 0.785 rad. A true 45° is π/4 = 0.7854 rad, so each arc is short by about 0.02°.
+Final heading: the left and right turns are exactly equal and opposite, so the robot ends facing exactly its starting direction.
+Time and limits: total time is 6.28 s. Every value is well inside the 0.22 m/s, 0.80 rad/s, 30 s per segment and 60 s total limits.
+Assumptions and design choices
+Only one pattern is supported. Any name other than "alternating_arcs" raises ValueError. That includes rounded_rectangle and l_path, because they weren't assigned to you. It also includes case or whitespace variants and non-string input. If your course expects NotImplementedError for the two unassigned patterns instead, it's a two-line change.
+There is an extra safety check. A _validate() step runs before anything is returned. It rejects values that are infinite, NaN or not numbers, speeds over the limits, segment times that are zero, negative or over 30 s, and a total time over 60 s. It adds to the course checks rather than replacing them.
+No stop segment is added. As the docstring says, the wrapper publishes the final zero command.
+The robot ends up offset to the left. Each left-then-right pair moves the robot forward 2r·sin θ and also shifts it left by 2r(1−cos θ). With two pairs, it ends about 0.85 m ahead and 0.35 m to the left of where it started. The spec only constrains heading, so this is expected, but don't be surprised by the sideways offset when you test it in simulation or on the real robot.
+Real-robot drift isn't modelled. Acceleration limits and publish-rate timing will make the real path differ slightly from the ideal one. Those effects belong to the wrapper and the evaluator.

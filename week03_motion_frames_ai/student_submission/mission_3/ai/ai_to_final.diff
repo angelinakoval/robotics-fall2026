@@ -1,0 +1,103 @@
+--- original_ai_output
++++ final_pattern.py
+@@ -4,23 +4,8 @@
+ version here. The node accepts only segments returned by ``build_pattern``.
+ """
+ from __future__ import annotations
+-
+-import math
+ from dataclasses import dataclass
+ 
+-# Safety envelope from the assignment. The course wrapper and evaluator still
+-# apply their own checks; this is an extra guard, not a replacement.
+-MAX_LINEAR_X = 0.22        # m/s
+-MAX_ANGULAR_Z = 0.80       # rad/s
+-MAX_SEGMENT_DURATION = 30.0  # s
+-MAX_TOTAL_DURATION = 60.0    # s
+-
+-# alternating_arcs parameters (given by the specification):
+-#   radius = v / w = 0.15 / 0.5  = 0.30 m
+-#   sweep  = w * t = 0.5 * 1.57  = 0.785 rad (~45 deg, pi/4 = 0.7854)
+-_ARC_LINEAR_X = 0.15
+-_ARC_ANGULAR_Z = 0.5
+-_ARC_DURATION = 1.57
+ 
+ 
+ @dataclass(frozen=True)
+@@ -29,65 +14,21 @@
+     angular_z: float
+     duration: float
+ 
+-
+-def _alternating_arcs() -> list[Segment]:
+-    """Four forward arcs: left, right, left, right (each 0.3 m radius, ~45 deg).
+-
+-    Left and right sweeps are equal and opposite, so the net heading change is
+-    exactly zero and the robot ends facing its initial direction.
+-    """
+-    left = Segment(linear_x=_ARC_LINEAR_X, angular_z=+_ARC_ANGULAR_Z, duration=_ARC_DURATION)
+-    right = Segment(linear_x=_ARC_LINEAR_X, angular_z=-_ARC_ANGULAR_Z, duration=_ARC_DURATION)
+-    return [left, right, left, right]
+-
+-
+-# Only the assigned pattern is implemented. Any other name is rejected.
+-_PATTERNS = {
+-    "alternating_arcs": _alternating_arcs,
+-}
+-
+-
+-def _validate(segments: list[Segment]) -> None:
+-    """Raise ValueError if any segment falls outside the safety envelope."""
+-    if not segments:
+-        raise ValueError("pattern produced no segments")
+-
+-    total = 0.0
+-    for i, seg in enumerate(segments):
+-        values = (seg.linear_x, seg.angular_z, seg.duration)
+-        if not all(isinstance(v, (int, float)) and math.isfinite(v) for v in values):
+-            raise ValueError(f"segment {i} has a non-finite or non-numeric value: {seg}")
+-        if abs(seg.linear_x) > MAX_LINEAR_X:
+-            raise ValueError(f"segment {i} linear_x {seg.linear_x} exceeds {MAX_LINEAR_X} m/s")
+-        if abs(seg.angular_z) > MAX_ANGULAR_Z:
+-            raise ValueError(f"segment {i} angular_z {seg.angular_z} exceeds {MAX_ANGULAR_Z} rad/s")
+-        if not 0.0 < seg.duration <= MAX_SEGMENT_DURATION:
+-            raise ValueError(
+-                f"segment {i} duration {seg.duration} not in (0, {MAX_SEGMENT_DURATION}] s"
+-            )
+-        total += seg.duration
+-
+-    if total > MAX_TOTAL_DURATION:
+-        raise ValueError(f"total duration {total} s exceeds {MAX_TOTAL_DURATION} s")
+-
+-
+ def build_pattern(pattern_name: str) -> list[Segment]:
+     """Return ordered, bounded motion segments for the assigned pattern.
+ 
+     Supported assignments are ``rounded_rectangle``, ``l_path``, and
+     ``alternating_arcs``. Do not include the final stop; the ROS wrapper always
+     publishes it and the evaluator verifies it.
++    """
++    if pattern_name != "alternating_arcs":
++        raise ValueError(f"unknown pattern: {pattern_name!r}")
++ 
++    # radius = 0.15 / 0.5 = 0.3 m; sweep = 0.5 * 1.57 = 0.785 rad (~45 deg)
++    return [
++        Segment(linear_x=0.15, angular_z=0.5, duration=1.57),   # left
++        Segment(linear_x=0.15, angular_z=-0.5, duration=1.57),  # right
++        Segment(linear_x=0.15, angular_z=0.5, duration=1.57),   # left
++        Segment(linear_x=0.15, angular_z=-0.5, duration=1.57),  # right
++    ]
+ 
+-    Only ``alternating_arcs`` is implemented here; every other name (including
+-    the two patterns not assigned to this student) raises ``ValueError``.
+-    """
+-    builder = _PATTERNS.get(pattern_name) if isinstance(pattern_name, str) else None
+-    if builder is None:
+-        raise ValueError(
+-            f"unknown or unassigned pattern {pattern_name!r}; "
+-            f"supported: {sorted(_PATTERNS)}"
+-        )
+-
+-    segments = builder()
+-    _validate(segments)
+-    return segments

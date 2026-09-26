@@ -1,0 +1,3 @@
+# Technical synthesis
+
+Our alternating-arcs program passed every test the robot stayed within the limits and each arc had the correct radius and angle. Although it performs well technically, this behavior would probably not be considered human-friendly, because the robot keeps moving left and right, while people tend to find smooth and predictable movements safer and more appropriate. For example, this pattern could make a pedestrian very uncomfortable if the robot and the person were in a narrow space (like a hallway). To evaluate this, we would need to observe how pedestrians react to the robot. To be able to navigate in human-populated areas, the robot's movements should be straighter and more predictable.
