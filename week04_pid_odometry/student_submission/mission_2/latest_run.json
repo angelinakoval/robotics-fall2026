@@ -1,0 +1,12 @@
+{
+  "finalError": 0,
+  "maxError": 0,
+  "mission_id": "mission_2",
+  "params": {
+    "forwardInPerTick": 0.05,
+    "strafeInPerTick": 0.05
+  },
+  "passed": true,
+  "saved_at": "2026-10-02T15:02:20",
+  "schema_version": 1
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-10-02T14:46:50",
+  "mission_id": "mission_1",
+  "student": {
+    "name": "Angelina Kovalchuk",
+    "student_id": "24493606",
+    "section": ""
+  },
+  "explanations": {
+    "prediction": "With too little Kp, I expect the arm to move slowly and settle below the target.\nWith too little kd, I expect the arm to reach the target quickly. It will overshoot and oscillate around the target before settling",
+    "tuning_analysis": "I predicted that with too little kd the arm would move fast and overshoot, and that's exactly what happened with kd = 0 (the arm swung past the target and oscillated before settling). I also predicted that too little kp would make the arm slow and weak. That was confirmed too - with kp =0 the arm moved very slowly and couldn't reach the target (it wasn't strong enough to overcome gravity).\nTo tune it, I increased both kp and kd parameters (kp=13.0 and kd = 4.0). The higher kp gave the arm enough strength to reach the target, and higher kd slowed down the motion, so it settled with little overshoot.\nWith gravity compensation off, the arm settled close to the target nut not exactly on it. With compensation on, it settled perfectly on the target."
+  },
+  "params": {
+    "activity": "two_link_arm_pid_tuning",
+    "kp1": 10.4,
+    "ki1": 2.5,
+    "kd1": 1.8,
+    "kp2": 12.9,
+    "ki2": 0.45,
+    "kd2": 4.1,
+    "gravityCompensation": false
+  },
+  "metrics": {
+    "completed": true,
+    "posesHeld": 3,
+    "posesRequired": 3
+  },
+  "checkin": {
+    "note": "I predicted that with too little kd the arm would move fast and overshoot, and that's exactly what happened with kd = 0 (the arm swung past the target and oscillated before settling). I also predicted that too little kp would make the arm slow and weak. That was confirmed too - with kp =0 the arm moved very slowly and couldn't reach the target (it wasn't strong enough to overcome gravity).\nTo tune it, I increased both kp and kd parameters (kp=13.0 and kd = 4.0). The higher kp gave the arm enough strength to reach the target, and higher kd slowed down the motion, so it settled with little overshoot.\nWith gravity compensation off, the arm settled close to the target nut not exactly on it. With compensation on, it settled perfectly on the target.",
+    "choice": "",
+    "complete": true
+  },
+  "csv_files": {},
+  "activity_gifs": [
+    "latest_arm_tuning.gif"
+  ]
+}
