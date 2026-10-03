@@ -14,7 +14,7 @@ If the wheel radius were wrong, the robot would think it was somewhere it isn't,
 ### human_centered_analysis
 
 The consequential failure is the robot entering a pedestrian's safety zone. When the speed was high in the simulation, the robot came very close to such a zone (after WP3) because it swung wide at the corners.
-To make the robot safer, I would make it drive slower new pedestrians and keep extra space from every safety zone. However, this will make the robot take more time to finish the trip
+To make the robot safer, I would make it drive slower new pedestrians and keep extra space from every safety zone. However, this will make the robot take more time to finish the trip.
 Trade-off: increase speed -> less safety, less time
 decrease speed -> more safety, more time
 Engineers are responsible for verifying this decision before deployment. They mush consider all edge cases before it is used around people.

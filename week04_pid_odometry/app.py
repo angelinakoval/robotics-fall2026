@@ -1374,9 +1374,6 @@ def csv_for_pid(result: PIDResult) -> str:
 
 
 def csv_for_odom(result: OdomResult) -> str:
-    if isinstance(result, dict):
-        from types import SimpleNamespace
-        result = SimpleNamespace(**result)
     buffer = io.StringIO()
     writer = csv.writer(buffer)
     writer.writerow(["time", "true_x", "true_y", "true_theta", "odom_x", "odom_y", "odom_theta", "left_distance", "right_distance"])

@@ -4,8 +4,8 @@
   "files": [
     {
       "path": "submission.json",
-      "size_bytes": 21515,
-      "crc32": "e9e5cd40"
+      "size_bytes": 21516,
+      "crc32": "ac312cf3"
     },
     {
       "path": "drawn_route.csv",
@@ -24,8 +24,8 @@
     },
     {
       "path": "explanation.md",
-      "size_bytes": 1386,
-      "crc32": "c466bd66"
+      "size_bytes": 1387,
+      "crc32": "f5c1dabe"
     }
   ]
 }
