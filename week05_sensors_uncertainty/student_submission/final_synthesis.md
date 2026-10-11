@@ -1,0 +1,5 @@
+# Final synthesis
+
+In Mission 1, the sensor was noisy rather than biased: its bias was only  -0.0003 m, but its standard deviation was about 0.22 m, with 3 outliers and 5 dropouts.
+Mission 2 showed that estimation choices trade accuracy against responsiveness. Larger moving-average windows lagged after sudden changes, raising rmse from 0.1485 to 0.1698 m. Weight 0.75 on Sensor A cut the delay to 0.7 s but raised the max error to 1.55 m, while weight 0.50 gave the lowest rmse (0.1378 m).
+Mission 3 showed that decisions depend on deployment context. Dropouts drove most errors: missing readings set to STOP caused unnecessary stops (0.0408 warehouse, 0.0338 assistive), MOVE raised assistive false-safes to 0.0924, and Insufficient evidence gave 0 for both. In the warehouse, raising the margin from 0.10 to 0.20 m removed false-safes. The assistive robot needed a higher threshold (0.95 m), because people with limited mobility bear the cost of both injuries and repeated stops.

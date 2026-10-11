@@ -1,0 +1,35 @@
+{
+  "files": {
+    "autosave/responses.json": "d343f1f49f8830cc61c07e5ecba475b785518989bf77a1ac9e1a53ac0a2fa9f1",
+    "autosave/responses.md": "dad618d2c448473ee398be5ea80ae797dd6c8e2277e170594e31dabfa2080e90",
+    "autosave/responses.recovery.f4d468ca15ee4cfabd412e222257ce2a.json": "9938d78a44f0e7e3b28fb3cbdddae21fe779763038e7a8132c6a744854fe29ef",
+    "final_reflection.md": "4bd5178fe3c03dbc13bf3c7e31516a8dffae1cda4594de2637899a8beae8c78e",
+    "final_synthesis.md": "d57065fcef63ce5eb9ed874a49a22ac91537479d23648fa36085f5bdecdd7fff",
+    "mission_1/evidence.png": "c1059e6557a9cc0647142ca719b63c0304d62e4d940bd6bf519be3cceb681529",
+    "mission_1/explanation.md": "8c2ca8ded8e876edf6adc68c430066566b3ff41e6db05bc360b82015809536af",
+    "mission_1/measurements.csv": "94c0fdda21ef7dbb90d681159829985efdaeeb6aa4d4fb56ca2ce4ee11bd0468",
+    "mission_1/submission.json": "77915f8411b4e00d15a0f953fe8b8851f9c4bbb35f40f350677dbff3b7fe5e82",
+    "mission_2/evidence.png": "10110175db30402d1b48faba1214a70a216f968579bbd5f1e72e13c62d54e617",
+    "mission_2/explanation.md": "0e5b6884f607041e6a42798fe4d397219e43d3695b737d66f0f93e27be2082ac",
+    "mission_2/measurements.csv": "cb1428405be60ff51441f7e4362ff6452cb7f04f1352cc58df7cf893eab5a16d",
+    "mission_2/submission.json": "7f30b4ee75e22df94dd51c4fd328b82d200e0707885a0a80f24227b211f984cc",
+    "mission_3/explanation.md": "3960561c2f05dc8c79a00d7d7a53f94023668c5b60a9f5d2da13de8633563c39",
+    "mission_3/measurements.csv": "0aaa2bb790cc4c137d2e4f7365e541c5d8cfb31b79335d7965794eb3f9fe0cc6",
+    "mission_3/submission.json": "fefc137294ecfdd23c8acf8a55b7a1e8de66c553c8ca73367b5e8a445b3ca232",
+    "student.json": "09fa3dc4c64931bd6c0fa595506abe73ac98c37c3ceb68287b0a7e670ce996d1"
+  },
+  "generated_at": "2026-10-11T04:27:17.978195+00:00",
+  "lab_id": "week05_sensors_uncertainty",
+  "mission_signatures": {
+    "mission_1": "b582cbee2c7f9357",
+    "mission_2": "ecd5f997eb51cc35",
+    "mission_3": "c7febb93face7adc"
+  },
+  "response_signature": "e0aca16c09df6422",
+  "schema_version": 2,
+  "student": {
+    "course_id": "24493606",
+    "email": "angelina.kovalchuk06@login.cuny.edu",
+    "name": "Angelina Kovalchuk"
+  }
+}
