@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-21T04:48:30.817738+00:00",
+  "world_id": "turtlebot3_house",
+  "strategy": "perimeter_then_interior",
+  "duration_minutes": 7.0,
+  "map_yaml": "map.yaml",
+  "map_image": "map.pgm",
+  "metrics": {
+    "width": 295,
+    "height": 207,
+    "resolution": 0.05,
+    "map_area_m2": 152.6625,
+    "known_fraction": 0.4229100139195939,
+    "unknown_fraction": 0.5770899860804061,
+    "occupied_fraction": 0.0302792106771473,
+    "free_fraction": 0.3926308032424466,
+    "occupied_components": 110,
+    "largest_component_cells": 468,
+    "speckle_fraction": 0.061114115738236885,
+    "border_contact_fraction": 0.204
+  },
+  "quality_score": 63.3
+}

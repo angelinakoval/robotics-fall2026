@@ -1,0 +1,35 @@
+{
+  "files": {
+    "autosave/responses.json": "9007c47d95f885233920e05ddaaa29cdaaef040fd79cf886a3a73b1beeaeb34f",
+    "autosave/responses.md": "0fd02a20baa794f2e45ff6e2d373c8353178887354320db195a1824210a98d27",
+    "final_reflection.md": "328a773316411da92ed1c94fd0ca0affba805940788c3a062c7d03c197e38c21",
+    "final_synthesis.md": "818c819513cbe4c74ff04a973da6bfb518330bea455d0ab60c74c0a8ea392ec3",
+    "mission_1/analysis.json": "108bbfc07dd1999ebcaa82d5849ef3251f376063628b50306a0a1a595790e1bb",
+    "mission_1/evidence.json": "d5bdfda2c8e3bffc946a3528836190f8cdf11c156616bdba078190b70badf7f6",
+    "mission_1/explanation.md": "1f07469dd73a674870f0064f3376ca84c1d7f5642803a6ffe213d5815878664e",
+    "mission_1/map.pgm": "3c0d57d75ab1fe5c181f819e4e653a5960901ebfd802b734adaad02781a01218",
+    "mission_1/map.yaml": "ff974975ef80501cd6817f4e534fbe43922463aa6f291045486f4ef3f6c6c7fd",
+    "mission_1/rviz_screenshot.png": "d335392d31ae84702362e0b09eb3382fe245dbec29eed1cf26412603f9fbe1b8",
+    "mission_1/submission.json": "58c869b3ef67f1a113bf737687472f92d1ccaf546f2bb91402d1fe0d7f88befb",
+    "mission_2/analysis.json": "51fb76ae88d95bba498fc929ff4a6efc403b86a9077159cbafae6a4b298918c4",
+    "mission_2/evidence.json": "d31dfa56cf95e9da1e8f29f2b4408d97f64d9172f3edb574f906ac54cbfa5a15",
+    "mission_2/explanation.md": "86d286a52f562921677a011985ba20ba503d978cd9cc3cd5ca97fbd6d2264c7a",
+    "mission_2/map.pgm": "f9a0bc47c9bf7cbac53396a046f1a7a14e7f917b8265c2a273d2abbd1f8fdfe8",
+    "mission_2/map.yaml": "e3c46eb8dfcc80d7a4a9ed8670b1bbe7d7317e44a6473bc4eec52a751708f3d2",
+    "mission_2/rviz_screenshot.png": "aabac9d19acebfe9ca4eaa51529f1a06250ffda4f364dcb2cefa99b4703d062d",
+    "mission_2/submission.json": "c4f2a06c0fb0165e34738c863b31873ffcd43daf45b4a20564f1f5c489be829e",
+    "student.json": "c789b18330aa5645f052c9937a0efdc045ed26e39aab75381ff620c1bc2cd092"
+  },
+  "generated_at": "2026-10-22T04:17:17.740783+00:00",
+  "lab_id": "week06_slam_localization",
+  "mission_signatures": {
+    "mission_1": "abfe1ffedfe218df",
+    "mission_2": "21a1f6b4f42c4645"
+  },
+  "response_signature": "cac01923fa4db3e1",
+  "schema_version": 2,
+  "student": {
+    "email": "angelina.kovalchuk06@stu-mail.hunter.cuny.edu",
+    "name": "Angelina Kovalchuk"
+  }
+}

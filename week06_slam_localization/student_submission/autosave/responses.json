@@ -1,0 +1,159 @@
+{
+  "checked_evidence_ids": {
+    "mission_1": "abfe1ffedfe218df",
+    "mission_2": "21a1f6b4f42c4645"
+  },
+  "completed_missions": [
+    "mission_1",
+    "mission_2"
+  ],
+  "content_version": 5,
+  "evidence": {
+    "mission_1": {
+      "captured_at": "2026-10-21T04:48:30.817738+00:00",
+      "duration_minutes": 7.0,
+      "map_image": "map.pgm",
+      "map_yaml": "map.yaml",
+      "metrics": {
+        "border_contact_fraction": 0.204,
+        "free_fraction": 0.3926308032424466,
+        "height": 207,
+        "known_fraction": 0.4229100139195939,
+        "largest_component_cells": 468,
+        "map_area_m2": 152.6625,
+        "occupied_components": 110,
+        "occupied_fraction": 0.0302792106771473,
+        "resolution": 0.05,
+        "speckle_fraction": 0.061114115738236885,
+        "unknown_fraction": 0.5770899860804061,
+        "width": 295
+      },
+      "quality_score": 63.3,
+      "schema_version": 1,
+      "strategy": "perimeter_then_interior",
+      "world_id": "turtlebot3_house"
+    },
+    "mission_2": {
+      "captured_at": "2026-10-22T03:34:27.534213+00:00",
+      "duration_minutes": 7.0,
+      "map_image": "map.pgm",
+      "map_yaml": "map.yaml",
+      "metrics": {
+        "border_contact_fraction": 0.004608294930875576,
+        "free_fraction": 0.32744098205854577,
+        "height": 300,
+        "known_fraction": 0.36086874409820585,
+        "largest_component_cells": 917,
+        "map_area_m2": 264.75,
+        "occupied_components": 319,
+        "occupied_fraction": 0.03342776203966006,
+        "resolution": 0.05,
+        "speckle_fraction": 0.0807909604519774,
+        "unknown_fraction": 0.6391312559017941,
+        "width": 353
+      },
+      "quality_score": 60.7,
+      "schema_version": 1,
+      "strategy": "room_by_room",
+      "world_id": "turtlebot3_house"
+    },
+    "preflight": {
+      "captured_at": "2026-10-21T03:39:29.592054+00:00",
+      "checks": [
+        {
+          "check": "ROS distribution",
+          "detail": "jazzy",
+          "passed": true
+        },
+        {
+          "check": "ros2 command",
+          "detail": "/opt/ros/jazzy/bin/ros2",
+          "passed": true
+        },
+        {
+          "check": "ROS_DOMAIN_ID",
+          "detail": "26 (expected 26 for course launcher)",
+          "passed": true
+        },
+        {
+          "check": "RViz command",
+          "detail": "/opt/ros/jazzy/bin/rviz2",
+          "passed": true
+        },
+        {
+          "check": "Package: turtlebot3_gazebo",
+          "detail": "turtlebot3_gazebo",
+          "passed": true
+        },
+        {
+          "check": "Package: turtlebot3_teleop",
+          "detail": "turtlebot3_teleop",
+          "passed": true
+        },
+        {
+          "check": "Package: slam_toolbox",
+          "detail": "slam_toolbox",
+          "passed": true
+        },
+        {
+          "check": "Package: nav2_map_server",
+          "detail": "nav2_map_server",
+          "passed": true
+        },
+        {
+          "check": "Package: course_slam_tools",
+          "detail": "course_slam_tools",
+          "passed": true
+        }
+      ],
+      "ready": true,
+      "run_id": "fd6b36744eab48ca9a83166347b82ec2",
+      "schema_version": 2
+    }
+  },
+  "lab_id": "week06_slam_localization",
+  "prediction_locks": {
+    "mission_1.route": {
+      "context_signature": "09ef949f5d712b72",
+      "text": "Route: drive forward to x =1, turn left through the gap, then turn left again and explore the left side of the map (top-left room, then bottom-left room). The robot will enter rooms through doorways. Return back to corridor (x  = 0, y = 0). Then explore the right side. Go straight until x = 6, turn right and explore bottom-right room, go back. Drive straight, turn left, and explore top-middle room.\nPlace to revisit: the narrow corridor (x=1, y=0.2). The robot passes it near start and it has some features that can help recognize it (doorway below, wall above, open corridor to the left and right)"
+    },
+    "mission_2.strategy": {
+      "context_signature": "cc347a8e65deaf0a",
+      "text": "My robot will explore the open area at the bottom of the start, and I will drive into the top middle room instead of skipping it.\nI predict this will produce cleaner and more complete map"
+    }
+  },
+  "responses": {
+    "final.course_reflection": "I liked this activity more than the previous ones, since there were fewer computations and formulas, and driving the robot was fun, although it took me some time to get use to it. \nI had some issues ,though. When you restart for mission 2, you also need to restart rviz, because otherwise it produces errors. At one point, my robot collided with something and kept spinning around for quite some time, and I didn't know how to stop it.",
+    "final.synthesis": "The robot builds its map by combining odometry with output from the lidar, so it knows only what the lidar has reported, and only as accurately as it knew its own position. Both maps show a similar layout: the long wall beside the start, the left rooms, the corridor, and the bottom-right room. In Mission 1, the top middle room and the bottom area stayed unexplored, because walls blocked the view (the robot can see only what the lidar reports) and the robot never went to these areas. \nMotion-estimate error explains the difference in quality: both routes took 7 min, and Mission 2 covered more space (but it has lower quality because walls and parts of the layout overlap). I think revisiting known places can help with this issue, because the robot can locate itself better.\nBoth maps have limits. They count labeled cells rather than correct ones, and nothing compares this information with a ground truth. \nFor a later task, I would trust the map that was obtained during Mission 1. It is missing some areas (middle top room and bottom area), however, it has less noise and overlaps: walls are straight, angles are right, and it matches the house plan. Mission 2 map covers more area, but it has overlapping areas.",
+    "mission_1.drift_and_revisit": "When I returned to the corridor near the start, the long horizontal wall looked mostly straight, but part of it left of the doorway appears thicker, like two lines, which may mean that an old wall shifted slightly",
+    "mission_1.limitations": "The top middle room stayed completely unknown. Its only opening is in the top-right corner, and the robot never drove through it, so the LiDAR could not see inside from the corridor below or the room to the right because the walls blocked its line of sight. The large area at the bottom of the map is also mostly unknown, because the robot only drove along the wall and that area is open.",
+    "mission_1.route.original_prediction": "Route: drive forward to x =1, turn left through the gap, then turn left again and explore the left side of the map (top-left room, then bottom-left room). The robot will enter rooms through doorways. Return back to corridor (x  = 0, y = 0). Then explore the right side. Go straight until x = 6, turn right and explore bottom-right room, go back. Drive straight, turn left, and explore top-middle room.\nPlace to revisit: the narrow corridor (x=1, y=0.2). The robot passes it near start and it has some features that can help recognize it (doorway below, wall above, open corridor to the left and right)",
+    "mission_1.route.prediction_draft": "Route: drive forward to x =1, turn left through the gap, then turn left again and explore the left side of the map (top-left room, then bottom-left room). The robot will enter rooms through doorways. Return back to corridor (x  = 0, y = 0). Then explore the right side. Go straight until x = 6, turn right and explore bottom-right room, go back. Drive straight, turn left, and explore top-middle room.\nPlace to revisit: the narrow corridor (x=1, y=0.2). The robot passes it near start and it has some features that can help recognize it (doorway below, wall above, open corridor to the left and right) ",
+    "mission_2.comparison": "Mission 2 mapped more space (95.54 VS 64.56). However, its known fraction dropped from 42.29% to 36.09% and its quality score fell from 63.3 to 60.7. My prediction wasn't supported, since I predicted a higher quality score and a clearer map, but Mission 2 covered more, and was less clean, so Mission 1 gave more useful coverage\nTradeoff: covering more ground in the same time leads to less careful scanning (more noise and errors) -> lower quality",
+    "mission_2.map_choice": "I would trust map from Mission 1 more, because it has a higher quality, it is cleaner (straight walls, right angles, match the house layout), even though bottom area and top middle room are unexplored. Mission 2 Map has overlapping house layout (overlapping rectangles, duplicated walls)",
+    "mission_2.strategy.original_prediction": "My robot will explore the open area at the bottom of the start, and I will drive into the top middle room instead of skipping it.\nI predict this will produce cleaner and more complete map",
+    "mission_2.strategy.prediction_draft": "My robot will explore the open area at the bottom of the start, and I will drive into the top middle room instead of skipping it.\nI predict this will produce cleaner and more complete map"
+  },
+  "schema_version": 2,
+  "stage": "final",
+  "student": {
+    "email": "angelina.kovalchuk06@stu-mail.hunter.cuny.edu",
+    "name": "Angelina Kovalchuk"
+  },
+  "tutorial_complete": {
+    "tutorial_1": true,
+    "tutorial_2": true,
+    "tutorial_3": true
+  },
+  "updated_at": "2026-10-22T04:17:00.687138+00:00",
+  "visited_stages": [
+    "intro",
+    "tutorial_1",
+    "tutorial_2",
+    "preflight",
+    "tutorial_3",
+    "mission_1",
+    "mission_2",
+    "final"
+  ]
+}

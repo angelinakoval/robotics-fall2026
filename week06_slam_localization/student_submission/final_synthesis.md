@@ -1,0 +1,6 @@
+# Final synthesis
+
+The robot builds its map by combining odometry with output from the lidar, so it knows only what the lidar has reported, and only as accurately as it knew its own position. Both maps show a similar layout: the long wall beside the start, the left rooms, the corridor, and the bottom-right room. In Mission 1, the top middle room and the bottom area stayed unexplored, because walls blocked the view (the robot can see only what the lidar reports) and the robot never went to these areas. 
+Motion-estimate error explains the difference in quality: both routes took 7 min, and Mission 2 covered more space (but it has lower quality because walls and parts of the layout overlap). I think revisiting known places can help with this issue, because the robot can locate itself better.
+Both maps have limits. They count labeled cells rather than correct ones, and nothing compares this information with a ground truth. 
+For a later task, I would trust the map that was obtained during Mission 1. It is missing some areas (middle top room and bottom area), however, it has less noise and overlaps: walls are straight, angles are right, and it matches the house plan. Mission 2 map covers more area, but it has overlapping areas.
