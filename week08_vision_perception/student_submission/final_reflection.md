@@ -1,0 +1,2 @@
+This assignment was a bit hard for me because there were many parameters to take care of. I also had some technical issues with the simulation. It was glitching from time to time, and the old world (from mission 2) kept running in the background, so the data for mission 3 looked confusing.
+This is a very time-consuming process that requires perseverance and attention, because you need to test several options and change only one setting at a time (or its influence will be confused with something else).
