@@ -1,0 +1,5 @@
+{
+  "mission_2.prediction": "I chose A* and DFS. I predict that A* will finish sooner on the constrained map, because DFS follows one path at the time as deep as it can, and on the constrained map we can have long detours and dead ends.\nA* uses g + ctx.heuristic(cell) to keep choosing cells that lead toward the goal, so it finds the shortest route",
+  "mission_2.performance": "On the constraint map, A* succeeded, with elapsed_s = 89.7s and distance_m = 23.88m. \nDFS hit a timeout, with elapsed_s = 179.96s and distance_m = 44.35m. \nThis supports my prediction that A* would finish sooner. In DFS attempt plot, the planned route is a long detour: it snakes up and down every column of free space instead of heading towards the goal",
+  "mission_2.choice": "I would choose nav 2 as the delivery planner because it succeeds on both maps, with elapsed_s = 35.4s on the open map and elapsed_s = 73.4s on the constrained map, which makes it the fastest of all the planners on each. A* also succeeds but nav2 drove a shorter distance on both open and constrained map"
+}

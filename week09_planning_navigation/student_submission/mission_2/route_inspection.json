@@ -1,0 +1,14 @@
+{
+  "run_id": "constrained_dfs_0_baseline_5b630aee90",
+  "map": "constrained",
+  "planner": "dfs",
+  "sample": 316,
+  "point": {
+    "t": 34.3,
+    "x": -4.262846162591581,
+    "y": 3.1788704339717184,
+    "speed_mps": 3.552713678800501e-12
+  },
+  "tracking_error_m": 0.11215383740841922,
+  "feature": "Straight segment"
+}

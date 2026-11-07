@@ -1,0 +1,317 @@
+{
+  "schema": 2,
+  "experiment_version": 7,
+  "mission": "3",
+  "run_id": "open_astar_0_social_1_509c6da16f",
+  "map": "open",
+  "planner": "astar",
+  "seed": 0,
+  "gazebo_partition": "lab8_planning_open_astar_0_social_1_509c6da16f",
+  "condition": "social_1",
+  "people": [
+    {
+      "x": 0.0,
+      "y": -1.7,
+      "radius": 0.25
+    }
+  ],
+  "map_hash": "620dd58e84e318de710a4b5e5722e8ef863893eb63c30307e659519696336f69",
+  "controller": "Regulated Pure Pursuit FollowPath 0.30 m/s common controller",
+  "timeout_s": 180,
+  "field_config": {
+    "human_gain": 3.95,
+    "influence_m": 1.7,
+    "step_m": 0.07
+  },
+  "field_hash": "1085c9c1aa616b08596384913f0c96a10790c4bbfaea9d463871396daee6f992",
+  "source_sha256": "4ec0dc75add62fc43a82a8252cc5efdf1d11af8099d9e8c4f24665802c014ec8",
+  "planning_metrics": {
+    "status": "succeeded",
+    "error": "",
+    "planning_s": 0.0016950419994827826,
+    "expanded": 650,
+    "peak_frontier": 121,
+    "path_length_m": 13.5,
+    "optimal_length_m": 13.5,
+    "optimality_ratio": 1.0
+  },
+  "path": [
+    [
+      -3.875,
+      -2.875
+    ],
+    [
+      -3.625,
+      -2.875
+    ],
+    [
+      -3.375,
+      -2.875
+    ],
+    [
+      -3.125,
+      -2.875
+    ],
+    [
+      -2.875,
+      -2.875
+    ],
+    [
+      -2.625,
+      -2.875
+    ],
+    [
+      -2.375,
+      -2.875
+    ],
+    [
+      -2.125,
+      -2.875
+    ],
+    [
+      -1.875,
+      -2.875
+    ],
+    [
+      -1.625,
+      -2.875
+    ],
+    [
+      -1.375,
+      -2.875
+    ],
+    [
+      -1.125,
+      -2.875
+    ],
+    [
+      -0.875,
+      -2.875
+    ],
+    [
+      -0.625,
+      -2.875
+    ],
+    [
+      -0.375,
+      -2.875
+    ],
+    [
+      -0.125,
+      -2.875
+    ],
+    [
+      0.125,
+      -2.875
+    ],
+    [
+      0.375,
+      -2.875
+    ],
+    [
+      0.625,
+      -2.875
+    ],
+    [
+      0.875,
+      -2.875
+    ],
+    [
+      1.125,
+      -2.875
+    ],
+    [
+      1.375,
+      -2.875
+    ],
+    [
+      1.625,
+      -2.875
+    ],
+    [
+      1.875,
+      -2.875
+    ],
+    [
+      2.125,
+      -2.875
+    ],
+    [
+      2.375,
+      -2.875
+    ],
+    [
+      2.625,
+      -2.875
+    ],
+    [
+      2.875,
+      -2.875
+    ],
+    [
+      3.125,
+      -2.875
+    ],
+    [
+      3.375,
+      -2.875
+    ],
+    [
+      3.625,
+      -2.875
+    ],
+    [
+      3.875,
+      -2.875
+    ],
+    [
+      3.875,
+      -2.625
+    ],
+    [
+      3.875,
+      -2.375
+    ],
+    [
+      3.875,
+      -2.125
+    ],
+    [
+      3.875,
+      -1.875
+    ],
+    [
+      3.875,
+      -1.625
+    ],
+    [
+      3.875,
+      -1.375
+    ],
+    [
+      3.875,
+      -1.125
+    ],
+    [
+      3.875,
+      -0.875
+    ],
+    [
+      3.875,
+      -0.625
+    ],
+    [
+      3.875,
+      -0.375
+    ],
+    [
+      3.875,
+      -0.125
+    ],
+    [
+      3.875,
+      0.125
+    ],
+    [
+      3.875,
+      0.375
+    ],
+    [
+      3.875,
+      0.625
+    ],
+    [
+      3.875,
+      0.875
+    ],
+    [
+      3.875,
+      1.125
+    ],
+    [
+      3.875,
+      1.375
+    ],
+    [
+      3.875,
+      1.625
+    ],
+    [
+      3.875,
+      1.875
+    ],
+    [
+      3.875,
+      2.125
+    ],
+    [
+      3.875,
+      2.375
+    ],
+    [
+      3.875,
+      2.625
+    ],
+    [
+      3.875,
+      2.875
+    ]
+  ],
+  "planning_status": "succeeded",
+  "planning_s": 0.0016950419994827826,
+  "kind": "social",
+  "trajectory": [],
+  "status": "field_oscillation",
+  "controller_config": {
+    "FollowPath": {
+      "cost_scaling_dist": 0.3,
+      "cost_scaling_gain": 1.0,
+      "desired_linear_vel": 0.3,
+      "inflation_cost_scaling_factor": 3.0,
+      "lookahead_dist": 0.45,
+      "max_allowed_time_to_collision_up_to_carrot": 1.0,
+      "max_angular_accel": 3.2,
+      "max_lookahead_dist": 0.8,
+      "min_approach_linear_velocity": 0.03,
+      "min_lookahead_dist": 0.3,
+      "plugin": "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController",
+      "regulated_linear_scaling_min_speed": 0.04,
+      "rotate_to_heading_angular_vel": 0.8,
+      "rotate_to_heading_min_angle": 0.5,
+      "transform_tolerance": 0.5,
+      "use_collision_detection": true,
+      "use_cost_regulated_linear_velocity_scaling": true,
+      "use_regulated_linear_velocity_scaling": true,
+      "use_rotate_to_heading": true,
+      "use_velocity_scaled_lookahead_dist": false
+    },
+    "controller_frequency": 10.0,
+    "controller_plugins": [
+      "FollowPath"
+    ],
+    "enable_stamped_cmd_vel": true,
+    "failure_tolerance": 0.3,
+    "goal_checker": {
+      "plugin": "nav2_controller::PositionGoalChecker",
+      "stateful": true,
+      "xy_goal_tolerance": 0.25
+    },
+    "goal_checker_plugins": [
+      "goal_checker"
+    ],
+    "min_theta_velocity_threshold": 0.001,
+    "min_x_velocity_threshold": 0.001,
+    "min_y_velocity_threshold": 0.001,
+    "progress_checker": {
+      "movement_time_allowance": 10.0,
+      "plugin": "nav2_controller::SimpleProgressChecker",
+      "required_movement_radius": 0.1
+    },
+    "progress_checker_plugins": [
+      "progress_checker"
+    ],
+    "use_sim_time": true
+  },
+  "controller_hash": "2efb133f34fc4e164d3c98bca9920ae5b1c33fed492b52ac6ff6266152c05cfa",
+  "field_status": "oscillation"
+}

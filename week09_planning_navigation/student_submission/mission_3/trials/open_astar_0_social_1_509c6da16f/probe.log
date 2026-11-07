@@ -1,0 +1,10 @@
+[INFO] [1794011766.921500798] [lab8_experiment_probe]: Waiting for Nav2 planning and path-following actions
+[INFO] [1794011767.951690548] [lab8_experiment_probe]: Waiting for map-frame robot position and lidar
+[INFO] [1794011771.440902425] [lab8_experiment_probe]: Waiting for planner_server lifecycle activation
+[INFO] [1794011771.475667008] [lab8_experiment_probe]: Waiting for controller_server lifecycle activation
+[INFO] [1794011771.482031842] [lab8_experiment_probe]: Waiting for velocity_smoother lifecycle activation
+[INFO] [1794011771.487871258] [lab8_experiment_probe]: Waiting for collision_monitor lifecycle activation
+[INFO] [1794011771.500564925] [lab8_experiment_probe]: Nav2 ready. Preparing the requested path
+[INFO] [1794011771.531341967] [lab8_experiment_probe]: Computing the human-aware potential-field path
+[INFO] [1794011771.535145925] [lab8_experiment_probe]: Finishing trial: field_oscillation
+{"status": "field_oscillation", "output": "/workspace/week09_planning_navigation/runtime/trials/open_astar_0_social_1_509c6da16f/result.json"}

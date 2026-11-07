@@ -1,0 +1,16 @@
+{
+  "status": "no_path",
+  "error": "",
+  "planning_s": 5.0874999942607246e-05,
+  "expanded": 15,
+  "peak_frontier": 5,
+  "path": [],
+  "path_length_m": 0.0,
+  "optimal_length_m": 0.0,
+  "optimality_ratio": null,
+  "case": "Disconnected goal",
+  "planner": "astar",
+  "source_sha256": "4ec0dc75add62fc43a82a8252cc5efdf1d11af8099d9e8c4f24665802c014ec8",
+  "expected_status": "no_path",
+  "check_passed": true
+}

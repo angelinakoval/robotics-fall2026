@@ -1,0 +1,19 @@
+[INFO] [1794007837.853591924] [lab8_experiment_probe]: Waiting for Nav2 planning and path-following actions
+[INFO] [1794007841.656980759] [lab8_experiment_probe]: Waiting for map-frame robot position and lidar
+[INFO] [1794007842.426827634] [lab8_experiment_probe]: Waiting for planner_server lifecycle activation
+[INFO] [1794007843.835499427] [lab8_experiment_probe]: Waiting for controller_server lifecycle activation
+[INFO] [1794007843.927836052] [lab8_experiment_probe]: Waiting for velocity_smoother lifecycle activation
+[INFO] [1794007844.433943385] [lab8_experiment_probe]: Waiting for collision_monitor lifecycle activation
+[INFO] [1794007844.437971469] [lab8_experiment_probe]: Nav2 ready. Preparing the requested path
+[INFO] [1794007844.473257302] [lab8_experiment_probe]: Following path: 0 simulated seconds, estimated goal distance awaiting first execution checkpoint
+[INFO] [1794007849.484772679] [lab8_experiment_probe]: Following path: 5 simulated seconds, estimated goal distance 8.62 m
+[INFO] [1794007854.494494626] [lab8_experiment_probe]: Following path: 10 simulated seconds, estimated goal distance 7.62 m
+[INFO] [1794007859.520609378] [lab8_experiment_probe]: Following path: 15 simulated seconds, estimated goal distance 6.77 m
+[INFO] [1794007864.526765964] [lab8_experiment_probe]: Following path: 19 simulated seconds, estimated goal distance 6.17 m
+[INFO] [1794007869.532869091] [lab8_experiment_probe]: Following path: 24 simulated seconds, estimated goal distance 5.79 m
+[INFO] [1794007874.546548427] [lab8_experiment_probe]: Following path: 29 simulated seconds, estimated goal distance 5.42 m
+[INFO] [1794007879.552303138] [lab8_experiment_probe]: Following path: 34 simulated seconds, estimated goal distance 4.06 m
+[INFO] [1794007884.562824209] [lab8_experiment_probe]: Following path: 38 simulated seconds, estimated goal distance 2.56 m
+[INFO] [1794007889.567438086] [lab8_experiment_probe]: Following path: 43 simulated seconds, estimated goal distance 1.14 m
+[INFO] [1794007893.394764963] [lab8_experiment_probe]: Finishing trial: succeeded
+{"status": "succeeded", "output": "/workspace/week09_planning_navigation/runtime/trials/open_bfs_0_baseline_3ac7b2a442/result.json"}
