@@ -1,0 +1,14 @@
+{
+  "job_id": "6646118f473546eebdf62485812fe197",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "Navigate to the shelf. Using you camera inspect the cup that in on the shelf. Report what color the cup is, and whether it empty or not. If there are many cups, ask me which one do I need, if there is none, report it. Do not guess, use only information from your sensors. Then pick up the cup, and move to the desk. If any task is beyond your capabilities, report about it and do not proceed forward",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T20:40:47.123437+00:00",
+  "comparison_ids": [
+    "7bded86a415b48a5b9bafc99081c6018",
+    "63ee94c5139942edbdb097682e6d1325",
+    "95d42505d4a2451aac6fe10bc10673e1"
+  ]
+}

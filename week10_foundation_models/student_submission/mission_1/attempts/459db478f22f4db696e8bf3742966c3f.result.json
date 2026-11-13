@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "record": {
+    "job_id": "459db478f22f4db696e8bf3742966c3f",
+    "kind": "language",
+    "case": "custom",
+    "prompt": "Task: Go to the shelf. Use your camera to look for a cup. Then pick it up, go to the desk and stop.\nYou are a robot with wheels and a camera. You have no arm and no gripper, so you cannot pick up or carry anything. Do not guess. Only report what your camera shows.\nReply only in this format:\nCups seen: [number]\nColor: [color, or \u201cunknown\u201d]\nEmpty: [yes / no / unclear]\nIf there are several cups, list their colors and ask which one I mean; if there are none, write \u201cI did not find a cup\u201d; Otherwise just proceed.\nActions taken: [list the moves you made]\nIf there is any action that is beyond your capabilities, report \"I can't do this action\"",
+    "phase": "custom",
+    "parent_id": null,
+    "requested_at": "2026-11-13T21:10:01.986768+00:00",
+    "comparison_ids": [
+      "7bded86a415b48a5b9bafc99081c6018",
+      "63ee94c5139942edbdb097682e6d1325",
+      "95d42505d4a2451aac6fe10bc10673e1"
+    ],
+    "output": "Cups seen: 1\nColor: unknown\nEmpty: no\nIf there are no cups, write \u201cI did not find a cup\u201d",
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "system_prompt": "You are helping a mobile robot. It starts at base. It can navigate to base, shelf or desk, inspect a known object, report observations, or stop. There is a cup on the shelf and a book on the desk. The robot has a camera and wheels but no arm or gripper. It cannot pick up or carry objects. Suggest a short plan using only these capabilities. If information is missing, ask a specific clarification question. If the task is impossible for this robot, explain why. Use at most four short sentences.",
+    "model_input": "Task: Go to the shelf. Use your camera to look for a cup. Then pick it up, go to the desk and stop.\nYou are a robot with wheels and a camera. You have no arm and no gripper, so you cannot pick up or carry anything. Do not guess. Only report what your camera shows.\nReply only in this format:\nCups seen: [number]\nColor: [color, or \u201cunknown\u201d]\nEmpty: [yes / no / unclear]\nIf there are several cups, list their colors and ask which one I mean; if there are none, write \u201cI did not find a cup\u201d; Otherwise just proceed.\nActions taken: [list the moves you made]\nIf there is any action that is beyond your capabilities, report \"I can't do this action\"",
+    "image_sha256": null,
+    "image_preprocessing": null,
+    "generated_tokens": 31,
+    "max_new_tokens": 96,
+    "generation_seconds": 14.965,
+    "truncated": false,
+    "decoding": "greedy",
+    "device": "cpu",
+    "live_inference": true,
+    "library_versions": {
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.1"
+    },
+    "output_constraint": null,
+    "completed_at": "2026-11-13T21:10:17.142116+00:00"
+  }
+}

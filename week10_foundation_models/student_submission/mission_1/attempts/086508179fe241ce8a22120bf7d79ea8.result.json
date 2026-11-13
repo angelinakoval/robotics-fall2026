@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "record": {
+    "job_id": "086508179fe241ce8a22120bf7d79ea8",
+    "kind": "language",
+    "case": "custom",
+    "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. You can navigate to base, shelf or desk, inspect a known object, report observations, or stop. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup. Report its color and whether it looks empty. If you see more than one cup, list their colors and ask which one I mean. If you see none, say \u201cI did not find a cup.\u201d Then go to the desk and stop. You have wheels and a camera only. Do not guess.\nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward\nReport what you observe",
+    "phase": "custom",
+    "parent_id": null,
+    "requested_at": "2026-11-13T21:03:02.634644+00:00",
+    "comparison_ids": [
+      "7bded86a415b48a5b9bafc99081c6018",
+      "63ee94c5139942edbdb097682e6d1325",
+      "95d42505d4a2451aac6fe10bc10673e1"
+    ],
+    "output": "I can navigate to the shelf and use my camera to look for a cup. I report its color and whether it looks empty. If I see more than one cup, I list their colors and ask which one I mean. If I see none, I say \"I did not find a cup.\" I then go to the desk and stop. I have wheels and a camera only. I do not guess.",
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "system_prompt": "You are helping a mobile robot. It starts at base. It can navigate to base, shelf or desk, inspect a known object, report observations, or stop. There is a cup on the shelf and a book on the desk. The robot has a camera and wheels but no arm or gripper. It cannot pick up or carry objects. Suggest a short plan using only these capabilities. If information is missing, ask a specific clarification question. If the task is impossible for this robot, explain why. Use at most four short sentences.",
+    "model_input": "You are the robot with wheels and camera, you don't have an arm or gripper. You can navigate to base, shelf or desk, inspect a known object, report observations, or stop. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup. Report its color and whether it looks empty. If you see more than one cup, list their colors and ask which one I mean. If you see none, say \u201cI did not find a cup.\u201d Then go to the desk and stop. You have wheels and a camera only. Do not guess.\nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward\nReport what you observe",
+    "image_sha256": null,
+    "image_preprocessing": null,
+    "generated_tokens": 83,
+    "max_new_tokens": 96,
+    "generation_seconds": 52.668,
+    "truncated": false,
+    "decoding": "greedy",
+    "device": "cpu",
+    "live_inference": true,
+    "library_versions": {
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.1"
+    },
+    "output_constraint": null,
+    "completed_at": "2026-11-13T21:03:55.484897+00:00"
+  }
+}

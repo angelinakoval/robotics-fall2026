@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "record": {
+    "job_id": "3caaa5bf057e4a959e2ecf9db18daac9",
+    "kind": "vision",
+    "case": "custom",
+    "prompt": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+    "phase": "custom",
+    "parent_id": null,
+    "requested_at": "2026-11-13T21:35:39.542921+00:00",
+    "comparison_ids": [
+      "1b7a476b3a944fdcb8e871aaa4f39b4d",
+      "f8e2f16fb94842db8999bb6a103afa5b",
+      "ffafcb072b304b09a2dcad35f364f7fd"
+    ],
+    "output": "Tape measure.",
+    "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+    "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+    "system_prompt": "",
+    "model_input": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+    "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+    "image_preprocessing": {
+      "longest_edge": 512,
+      "image_splitting": false
+    },
+    "generated_tokens": 4,
+    "max_new_tokens": 80,
+    "generation_seconds": 8.849,
+    "truncated": false,
+    "decoding": "greedy",
+    "device": "cpu",
+    "live_inference": true,
+    "library_versions": {
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.1"
+    },
+    "output_constraint": null,
+    "completed_at": "2026-11-13T21:35:48.517335+00:00"
+  }
+}

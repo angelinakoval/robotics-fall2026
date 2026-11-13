@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "record": {
+    "job_id": "114e9913e77c44cb9a96cb3958d5a03c",
+    "kind": "language",
+    "case": "custom",
+    "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup, grab it and move to the desk. Report its color and whether it looks empty. \nReport in the format:\nCups seen: [number] \nColor: [color, or \u201cunknown\u201d] \nEmpty: [yes / no / unclear]\n\nIf you see more than one cup, ask which one I mean. If there is none, report \u201cI did not find a cup.\u201d \nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't do this task\u201d and stop",
+    "phase": "custom",
+    "parent_id": null,
+    "requested_at": "2026-11-13T23:35:05.533664+00:00",
+    "comparison_ids": [
+      "2972281ff02f4d2786d0f25416625518",
+      "2d8ab7ac32724b59b0fa55eef0b5ddf6",
+      "f4708531e7404bcc9225b555882f0c43"
+    ],
+    "output": "Cups seen: 1 \nColor: unknown \nEmpty: no",
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "system_prompt": "You are helping a mobile robot. It starts at base. It can navigate to base, shelf or desk, inspect a known object, report observations, or stop. There is a cup on the shelf and a book on the desk. The robot has a camera and wheels but no arm or gripper. It cannot pick up or carry objects. Suggest a short plan using only these capabilities. If information is missing, ask a specific clarification question. If the task is impossible for this robot, explain why. Use at most four short sentences.",
+    "model_input": "You are the robot with wheels and camera, you don't have an arm or gripper. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup, grab it and move to the desk. Report its color and whether it looks empty. \nReport in the format:\nCups seen: [number] \nColor: [color, or \u201cunknown\u201d] \nEmpty: [yes / no / unclear]\n\nIf you see more than one cup, ask which one I mean. If there is none, report \u201cI did not find a cup.\u201d \nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't do this task\u201d and stop",
+    "image_sha256": null,
+    "image_preprocessing": null,
+    "generated_tokens": 17,
+    "max_new_tokens": 96,
+    "generation_seconds": 8.323,
+    "truncated": false,
+    "decoding": "greedy",
+    "device": "cpu",
+    "live_inference": true,
+    "library_versions": {
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.1"
+    },
+    "output_constraint": null,
+    "completed_at": "2026-11-13T23:35:14.035795+00:00"
+  }
+}

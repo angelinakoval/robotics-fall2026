@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "record": {
+    "job_id": "8a4c8e6adc7f42bebdceaf697b16927b",
+    "kind": "language",
+    "case": "custom",
+    "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. You can navigate to base, shelf or desk, inspect a known object, report observations, or stop. You cannot pick up or carry objects. Your task is find a shelf, go to the shelf, inspect it using your camera, find a cup, take it, find the desk, navigate to there, inspect the desk, and put the cup on the desk. When you detect a cup, report what color the cup is, and whether it empty or not. If there are many cups, ask me which one do I need in format \"There are many cups on the shelf, [list the colors of cups], which cup do you need?\", if there is none, report \"I did not find any cup on the shelf\". Do not guess, use only information from your sensors. If any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward",
+    "phase": "custom",
+    "parent_id": null,
+    "requested_at": "2026-11-13T20:54:12.602255+00:00",
+    "comparison_ids": [
+      "7bded86a415b48a5b9bafc99081c6018",
+      "63ee94c5139942edbdb097682e6d1325",
+      "95d42505d4a2451aac6fe10bc10673e1"
+    ],
+    "output": "I can navigate to base, shelf, and desk, inspect a known object, report observations, or stop. I can stop if I encounter an obstacle or if I don't find the object I'm looking for. I can stop if I encounter an obstacle or if I don't find the object I'm looking for. I can stop if I encounter an obstacle or if I don't find the object I'm looking for. I can stop if I encounter an obstacle or if I",
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "system_prompt": "You are helping a mobile robot. It starts at base. It can navigate to base, shelf or desk, inspect a known object, report observations, or stop. There is a cup on the shelf and a book on the desk. The robot has a camera and wheels but no arm or gripper. It cannot pick up or carry objects. Suggest a short plan using only these capabilities. If information is missing, ask a specific clarification question. If the task is impossible for this robot, explain why. Use at most four short sentences.",
+    "model_input": "You are the robot with wheels and camera, you don't have an arm or gripper. You can navigate to base, shelf or desk, inspect a known object, report observations, or stop. You cannot pick up or carry objects. Your task is find a shelf, go to the shelf, inspect it using your camera, find a cup, take it, find the desk, navigate to there, inspect the desk, and put the cup on the desk. When you detect a cup, report what color the cup is, and whether it empty or not. If there are many cups, ask me which one do I need in format \"There are many cups on the shelf, [list the colors of cups], which cup do you need?\", if there is none, report \"I did not find any cup on the shelf\". Do not guess, use only information from your sensors. If any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward",
+    "image_sha256": null,
+    "image_preprocessing": null,
+    "generated_tokens": 96,
+    "max_new_tokens": 96,
+    "generation_seconds": 44.009,
+    "truncated": true,
+    "decoding": "greedy",
+    "device": "cpu",
+    "live_inference": true,
+    "library_versions": {
+      "torch": "2.8.0+cpu",
+      "transformers": "4.57.1"
+    },
+    "output_constraint": null,
+    "completed_at": "2026-11-13T20:54:56.824401+00:00"
+  }
+}

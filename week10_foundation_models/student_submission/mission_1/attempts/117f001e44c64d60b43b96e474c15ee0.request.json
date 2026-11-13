@@ -1,0 +1,14 @@
+{
+  "job_id": "117f001e44c64d60b43b96e474c15ee0",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. Your task is find a shelf, go to the shelf, inspect it using your camera, find a cup, take it, find the desk, navigate to there, inspect the desk, and put the cup on the desk. When you detect a cup, report what color the cup is, and whether it empty or not. If there are many cups, ask me which one do I need in format \"There are many cups on the shelf, [list the colors of cups], which cup do you need?\", if there is none, report \"I did not find any cup on the shelf\". Do not guess, use only information from your sensors. If any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T20:51:57.895333+00:00",
+  "comparison_ids": [
+    "7bded86a415b48a5b9bafc99081c6018",
+    "63ee94c5139942edbdb097682e6d1325",
+    "95d42505d4a2451aac6fe10bc10673e1"
+  ]
+}

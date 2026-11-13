@@ -1,0 +1,100 @@
+{
+  "stage": "mission_1",
+  "responses": {
+    "m1_analysis": "The revised request improved the response. In the original example, the robot reported that the cup is empty. In my version, it reported that the cup is not empty. It couldn't detect the color of the cup and reported \"unknown\" instead of making it up. \nOne problem is that I ask it to bring a cup, and it didn't report that it can't do that action.",
+    "m2_analysis": "I tried many options, but even my revised request provides incorrect answer (measuring tape, instead of metal drawing compass)"
+  },
+  "student": {
+    "name": "",
+    "email": ""
+  },
+  "tutorial_step": 5,
+  "tutorial_reviewed": 6,
+  "controls": {
+    "control_ground_instruction": "Point to the red cup",
+    "control_demo_step": 3,
+    "control_adapt_instruction": "Move the yellow cup to the tray",
+    "control_adapt_choice": "Additional demonstrations",
+    "control_adapt_scenario": "The request does not identify the intended cup",
+    "control_adapt_records": 3,
+    "control_movement_angle": 0,
+    "control_chunk_hz": 5,
+    "control_chunk_size": 8,
+    "control_movement_token": 61,
+    "control_validate_case": "Navigate to the shelf",
+    "control_validate_conf_navigate": 1.0,
+    "control_validate_age_navigate": 0.8,
+    "control_live_language_active": "6bb5efeee46d4289a7c3b8e96cdf1fe2",
+    "control_live_language_runs": [
+      "7bded86a415b48a5b9bafc99081c6018",
+      "63ee94c5139942edbdb097682e6d1325",
+      "95d42505d4a2451aac6fe10bc10673e1",
+      "6646118f473546eebdf62485812fe197",
+      "4b49146d78984bcda3202182f6477560",
+      "117f001e44c64d60b43b96e474c15ee0",
+      "8a4c8e6adc7f42bebdceaf697b16927b",
+      "720144e16bcf4e9bbe1f2ed930a69111",
+      "086508179fe241ce8a22120bf7d79ea8",
+      "8443736f2b684522ad6d10c522ea15cc",
+      "69fef2d33d534feeb2efefb3be1d1e41",
+      "459db478f22f4db696e8bf3742966c3f",
+      "031fc3a2df544506b8b6d9aa3c18aeb5",
+      "2972281ff02f4d2786d0f25416625518",
+      "2d8ab7ac32724b59b0fa55eef0b5ddf6",
+      "f4708531e7404bcc9225b555882f0c43",
+      "114e9913e77c44cb9a96cb3958d5a03c",
+      "6bb5efeee46d4289a7c3b8e96cdf1fe2"
+    ],
+    "control_live_language_custom_prompt": "Task: Go to the shelf. Use your camera to look for a cup. Then pick it up, go to the desk and stop. You are a robot with wheels and a camera. You have no arm and no gripper, so you cannot pick up or carry anything. Do not guess. Only report what your camera shows. Reply only in this format: Cups seen: [number] Color: [color, or \"unknown\"] Empty: [yes / no / unclear] If there are several cups, list their colors and ask which one I mean; if there are none, write \"I did not find a cup\"; Otherwise just proceed. Actions taken: [list the moves you made] If there is any action that is beyond your capabilities, report \"I can't do this action\"",
+    "control_live_vision_runs": [
+      "1b7a476b3a944fdcb8e871aaa4f39b4d",
+      "f8e2f16fb94842db8999bb6a103afa5b",
+      "ffafcb072b304b09a2dcad35f364f7fd",
+      "6d7db9051b0648fb8f313da551bee744",
+      "5f1adf8322684585acf2c9fa6ddbbf71",
+      "99f9f2539d6a46a1ab5115e8900a090b",
+      "3caaa5bf057e4a959e2ecf9db18daac9",
+      "44740bf15cac4eb1aca9b7a6a2d58d78",
+      "3deb626296434e9193b55aabc0e2fc83",
+      "5906b7378ddb4f54a21ec090be09da9f",
+      "db05e472c6a34932879a802715b1c692",
+      "5c853c435cbe4a74982f5f1548d64d4c"
+    ],
+    "control_live_vision_active": "5c853c435cbe4a74982f5f1548d64d4c",
+    "control_live_vision_custom_prompt": "Task: identify the tool that is closest to your camera\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+    "control_robot_runs": [
+      "1bcbc3470604463bb954867387791e8a",
+      "3e971bae922644c4bac3aede2302bb9e",
+      "3cfd0466025d48a0913f0394ff144d37",
+      "4b6201de44e141719d699ff5abc14a9b",
+      "ced2639842f949fbab5b5398e0719a58",
+      "30240b4c097e468cb0c34e7b755079d6",
+      "d9f34e64828d4fdabc47b06888c72dd6",
+      "0ba9ae8f474d4493a13097952b8122b0",
+      "cf26bf7e8b3e4f8d9b66c45105917660",
+      "b53f05169efa42eeb53d1db75ce0828a",
+      "d3c706bce5104969820b1f067ad476da",
+      "0bbb86e9be1c43c090da255b473327bf",
+      "d7e8b302b054470b9c7a8c0b84fc5e21",
+      "3432037645a24f8f854c567fda228597",
+      "40f0ebba4d4f49bf8b8c88e5c6010fc1",
+      "3c3d0c2a20be41af94950e06ff3e7d5c"
+    ],
+    "control_robot_active": "3c3d0c2a20be41af94950e06ff3e7d5c",
+    "control_robot_custom_prompt": "Goal (11,1). Coordinates are (column, row). Look at the Neighbor cells.\nIn column 1, 2 or 3: go RIGHT if it is free, otherwise UP.\nIn column 4, 5, 6 or 7: go RIGHT if it is free, otherwise DOWN.\nIn column 8, 9, 10 or 11: go RIGHT if it is free, otherwise UP.\nAt (11,1): STOP."
+  },
+  "guided_version": 4,
+  "guided_seen": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "response_widgets": [
+    "m1_analysis",
+    "m2_analysis"
+  ],
+  "version": 2
+}

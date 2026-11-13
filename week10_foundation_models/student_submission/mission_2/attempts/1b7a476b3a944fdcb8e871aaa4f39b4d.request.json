@@ -1,0 +1,10 @@
+{
+  "job_id": "1b7a476b3a944fdcb8e871aaa4f39b4d",
+  "kind": "vision",
+  "case": "identify",
+  "prompt": "What tool is lying in the foreground of this workbench?",
+  "phase": "baseline",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:13:47.360673+00:00",
+  "comparison_ids": []
+}

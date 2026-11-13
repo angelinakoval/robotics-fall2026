@@ -1,0 +1,93 @@
+job_id,kind,case,prompt,phase,parent_id,requested_at,comparison_ids,output,model,model_revision,system_prompt,model_input,image_sha256,image_preprocessing,generated_tokens,max_new_tokens,generation_seconds,truncated,decoding,device,live_inference,library_versions,output_constraint,completed_at
+1b7a476b3a944fdcb8e871aaa4f39b4d,vision,identify,What tool is lying in the foreground of this workbench?,baseline,,2026-11-13T21:13:47.360673+00:00,[],Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,What tool is lying in the foreground of this workbench?,0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,18.171,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:14:30.435853+00:00
+f8e2f16fb94842db8999bb6a103afa5b,vision,spatial,Where is the black vertical metal post relative to the tool in the foreground?,baseline,,2026-11-13T21:14:57.081601+00:00,[],The black vertical metal post is to the right of the tool in the foreground.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,Where is the black vertical metal post relative to the tool in the foreground?,0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",17,80,20.728,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:15:17.852698+00:00
+ffafcb072b304b09a2dcad35f364f7fd,vision,purpose,A robot needs the correct tool for its task. Which object in this image should it pick up?,baseline,,2026-11-13T21:15:32.687537+00:00,[],The robot needs the correct tool for its task. The correct tool is a measuring tape.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,A robot needs the correct tool for its task. Which object in this image should it pick up?,0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",19,80,18.191,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:15:50.943626+00:00
+6d7db9051b0648fb8f313da551bee744,vision,custom,"Task: identify the tool that is the closest one to the table front edge. Provide visible features of that tool that 
+Reply in the format: detected object : {name the object}, features: {list the features: color, size and etc.}",custom,,2026-11-13T21:26:27.268166+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]","1. Tape measure
+2. 
+Detected object: Tape measure, features: Tape measure is a measuring tool used to measure lengths and distances. It has a flexible material that allows it to move freely and accurately measure the length of a surface. The tape measure is attached to a metal rod, which is attached to a wooden table.",HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: identify the tool that is the closest one to the table front edge. Provide visible features of that tool that 
+Reply in the format: detected object : {name the object}, features: {list the features: color, size and etc.}",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",71,80,91.515,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:28:25.608016+00:00
+5f1adf8322684585acf2c9fa6ddbbf71,vision,custom,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: detected object : [name, or ""unclear""], features: [shape, material, color, part that you can see], confidence level [high, medium, low]",custom,,2026-11-13T21:34:14.748605+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: detected object : [name, or ""unclear""], features: [shape, material, color, part that you can see], confidence level [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,18.389,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:34:33.353636+00:00
+99f9f2539d6a46a1ab5115e8900a090b,vision,custom,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:35:08.091162+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,8.783,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:35:16.942851+00:00
+3caaa5bf057e4a959e2ecf9db18daac9,vision,custom,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:35:39.542921+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: name the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Reply in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,8.849,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:35:48.517335+00:00
+44740bf15cac4eb1aca9b7a6a2d58d78,vision,custom,"Task: identify the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:36:27.994281+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: identify the tool that is lying in the foreground of the photo
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,8.796,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:36:36.926522+00:00
+3deb626296434e9193b55aabc0e2fc83,vision,custom,"Task: Identify. Goal: name the tool lying in the foreground of the photo.
+Look only at the foreground tool. Ignore other objects. Do not guess. If you are not sure, write “unclear”.
+Reply in this format, one line each:
+Tool:
+Visible features:
+Assumptions:
+Confidence (high / medium / low):",custom,,2026-11-13T21:37:35.030316+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: Identify. Goal: name the tool lying in the foreground of the photo.
+Look only at the foreground tool. Ignore other objects. Do not guess. If you are not sure, write “unclear”.
+Reply in this format, one line each:
+Tool:
+Visible features:
+Assumptions:
+Confidence (high / medium / low):",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,16.506,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:37:51.710091+00:00
+5906b7378ddb4f54a21ec090be09da9f,vision,custom,"Task: identify the tool that is lying in the foreground of the workbench
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:38:48.396950+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",Tape measure.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: identify the tool that is lying in the foreground of the workbench
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,21.84,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:39:10.306494+00:00
+db05e472c6a34932879a802715b1c692,vision,custom,"Task: identify the tool that is lying in the foreground of the workbench
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report ""I am not able to see a workbench""
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:40:21.867050+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",measuring tape.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: identify the tool that is lying in the foreground of the workbench
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report ""I am not able to see a workbench""
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",4,80,20.531,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:40:42.515431+00:00
+5c853c435cbe4a74982f5f1548d64d4c,vision,custom,"Task: identify the tool that is closest to your camera
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report ""I am not able to see a workbench""
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",custom,,2026-11-13T21:41:24.527283+00:00,"[""1b7a476b3a944fdcb8e871aaa4f39b4d"", ""f8e2f16fb94842db8999bb6a103afa5b"", ""ffafcb072b304b09a2dcad35f364f7fd""]",The tool that is closest to your camera is a measuring tape.,HuggingFaceTB/SmolVLM-500M-Instruct,a7da5b986cb59b408707209984f360a5f4ad7e47,,"Task: identify the tool that is closest to your camera
+Look only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report ""I am not able to see a workbench""
+Report in the format: 
+tool : [name, or ""unclear""], 
+visible features: [shape, material, color, part that you can see], 
+confidence level"" [high, medium, low]",0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff,"{""longest_edge"": 512, ""image_splitting"": false}",16,80,33.275,False,greedy,cpu,True,"{""torch"": ""2.8.0+cpu"", ""transformers"": ""4.57.1""}",,2026-11-13T21:41:57.962967+00:00

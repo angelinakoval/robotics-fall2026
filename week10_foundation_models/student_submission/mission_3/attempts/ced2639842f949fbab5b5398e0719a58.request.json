@@ -1,0 +1,29 @@
+{
+  "job_id": "ced2639842f949fbab5b5398e0719a58",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "Task: Reach the blue target crate at (11,1)\nStrategy:  \nF - move forward until you detect an obstacle\nR - turn right by 90 degrees\nL - turn left by 90 degrees\nExecute the sequence of steps: F-R-F-R-F-L-F-L-F",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T22:11:09.511905+00:00",
+  "comparison_ids": [
+    "4b6201de44e141719d699ff5abc14a9b",
+    "3e971bae922644c4bac3aede2302bb9e",
+    "3cfd0466025d48a0913f0394ff144d37"
+  ],
+  "task": "robot",
+  "robot_state": {
+    "position": [
+      1,
+      7
+    ],
+    "step": 0,
+    "history": [],
+    "finished": false,
+    "goal_reached": false,
+    "first_goal_step": null,
+    "last_feedback": "No previous action.",
+    "last_decision": null
+  },
+  "simulator_contract": "8da30a943bd97ee39237aa05e8e6800fecdecbef3ce692d7d4e48f851679060f"
+}

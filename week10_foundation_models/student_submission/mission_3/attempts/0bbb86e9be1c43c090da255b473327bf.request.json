@@ -1,0 +1,29 @@
+{
+  "job_id": "0bbb86e9be1c43c090da255b473327bf",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "Goal: reach (11,1). Coordinates are (column, row). Never answer STOP before you are at (11,1).\nMost important: when you are on row 1 and your column is less than 7, answer RIGHT.\nRoute: from the start, go UP to row 1. Then go RIGHT to column 7. Then go DOWN to row 7. Then go RIGHT to column 11. Then go UP to row 1.\nIf your last move was blocked, do not repeat it. Choose the next direction in the route.\nAt (11,1), answer STOP",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T22:50:20.369350+00:00",
+  "comparison_ids": [
+    "4b6201de44e141719d699ff5abc14a9b",
+    "3e971bae922644c4bac3aede2302bb9e",
+    "3cfd0466025d48a0913f0394ff144d37"
+  ],
+  "task": "robot",
+  "robot_state": {
+    "position": [
+      1,
+      7
+    ],
+    "step": 0,
+    "history": [],
+    "finished": false,
+    "goal_reached": false,
+    "first_goal_step": null,
+    "last_feedback": "No previous action.",
+    "last_decision": null
+  },
+  "simulator_contract": "8da30a943bd97ee39237aa05e8e6800fecdecbef3ce692d7d4e48f851679060f"
+}

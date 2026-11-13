@@ -1,0 +1,14 @@
+{
+  "job_id": "69fef2d33d534feeb2efefb3be1d1e41",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "Task: Go to the shelf. Use your camera to look for a cup. Then go to the desk and stop.\nYou are a robot with wheels and a camera. You have no arm, so you cannot pick up or carry anything. Do not guess. Only report what your camera shows.\nReply only in this format:\nCups seen: [number]\nColor: [color, or \u201cunknown\u201d]\nEmpty: [yes / no / unclear]\nQuestion for me: [if there are several cups, list their colors and ask which one I mean; if there are none, write \u201cI did not find a cup\u201d; otherwise write \u201cnone\u201d]\nActions taken: [list the moves you made]",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:07:24.476151+00:00",
+  "comparison_ids": [
+    "7bded86a415b48a5b9bafc99081c6018",
+    "63ee94c5139942edbdb097682e6d1325",
+    "95d42505d4a2451aac6fe10bc10673e1"
+  ]
+}

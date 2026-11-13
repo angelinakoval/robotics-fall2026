@@ -108,9 +108,10 @@ def job_status(kind, job_id):
         write_json(queue / (job_id + ".result.json"), failure)
         return failure
     elapsed = time.time() - request_path.stat().st_mtime
-    if elapsed > 300:
+    limit = 1800 if request.get("task") == "robot" else 300
+    if elapsed > limit:
         cancel_job(kind, job_id)
-        return {"status": "error", "error": "This run exceeded five minutes. Run it again. Check Preflight if the problem continues."}
+        return {"status": "error", "error": "This run exceeded the time limit. Run it again. Check Preflight if the problem continues."}
     _ensure_worker(kind)
     return {**read_json(queue / (job_id + ".status.json"), {"status": "queued"}), "elapsed": round(elapsed, 1)}
 

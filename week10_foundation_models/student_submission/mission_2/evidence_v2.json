@@ -1,0 +1,454 @@
+{
+  "version": 2,
+  "run_id": "5eec34612a1d45ceb63d60fe4b00dede",
+  "mission": "mission_2",
+  "saved_at": "2026-11-13T21:42:49.668511+00:00",
+  "settings": {
+    "experiment": "local-live-v2",
+    "model": {
+      "id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "revision": "a7da5b986cb59b408707209984f360a5f4ad7e47"
+    }
+  },
+  "rows": [
+    {
+      "job_id": "1b7a476b3a944fdcb8e871aaa4f39b4d",
+      "kind": "vision",
+      "case": "identify",
+      "prompt": "What tool is lying in the foreground of this workbench?",
+      "phase": "baseline",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:13:47.360673+00:00",
+      "comparison_ids": [],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "What tool is lying in the foreground of this workbench?",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 18.171,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:14:30.435853+00:00"
+    },
+    {
+      "job_id": "f8e2f16fb94842db8999bb6a103afa5b",
+      "kind": "vision",
+      "case": "spatial",
+      "prompt": "Where is the black vertical metal post relative to the tool in the foreground?",
+      "phase": "baseline",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:14:57.081601+00:00",
+      "comparison_ids": [],
+      "output": "The black vertical metal post is to the right of the tool in the foreground.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Where is the black vertical metal post relative to the tool in the foreground?",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 17,
+      "max_new_tokens": 80,
+      "generation_seconds": 20.728,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:15:17.852698+00:00"
+    },
+    {
+      "job_id": "ffafcb072b304b09a2dcad35f364f7fd",
+      "kind": "vision",
+      "case": "purpose",
+      "prompt": "A robot needs the correct tool for its task. Which object in this image should it pick up?",
+      "phase": "baseline",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:15:32.687537+00:00",
+      "comparison_ids": [],
+      "output": "The robot needs the correct tool for its task. The correct tool is a measuring tape.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "A robot needs the correct tool for its task. Which object in this image should it pick up?",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 19,
+      "max_new_tokens": 80,
+      "generation_seconds": 18.191,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:15:50.943626+00:00"
+    },
+    {
+      "job_id": "6d7db9051b0648fb8f313da551bee744",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: identify the tool that is the closest one to the table front edge. Provide visible features of that tool that \nReply in the format: detected object : {name the object}, features: {list the features: color, size and etc.}",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:26:27.268166+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "1. Tape measure\n2. \nDetected object: Tape measure, features: Tape measure is a measuring tool used to measure lengths and distances. It has a flexible material that allows it to move freely and accurately measure the length of a surface. The tape measure is attached to a metal rod, which is attached to a wooden table.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: identify the tool that is the closest one to the table front edge. Provide visible features of that tool that \nReply in the format: detected object : {name the object}, features: {list the features: color, size and etc.}",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 71,
+      "max_new_tokens": 80,
+      "generation_seconds": 91.515,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:28:25.608016+00:00"
+    },
+    {
+      "job_id": "5f1adf8322684585acf2c9fa6ddbbf71",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: detected object : [name, or \"unclear\"], features: [shape, material, color, part that you can see], confidence level [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:34:14.748605+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: detected object : [name, or \"unclear\"], features: [shape, material, color, part that you can see], confidence level [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 18.389,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:34:33.353636+00:00"
+    },
+    {
+      "job_id": "99f9f2539d6a46a1ab5115e8900a090b",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:35:08.091162+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 8.783,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:35:16.942851+00:00"
+    },
+    {
+      "job_id": "3caaa5bf057e4a959e2ecf9db18daac9",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:35:39.542921+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 8.849,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:35:48.517335+00:00"
+    },
+    {
+      "job_id": "44740bf15cac4eb1aca9b7a6a2d58d78",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: identify the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:36:27.994281+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: identify the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 8.796,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:36:36.926522+00:00"
+    },
+    {
+      "job_id": "3deb626296434e9193b55aabc0e2fc83",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: Identify. Goal: name the tool lying in the foreground of the photo.\nLook only at the foreground tool. Ignore other objects. Do not guess. If you are not sure, write \u201cunclear\u201d.\nReply in this format, one line each:\nTool:\nVisible features:\nAssumptions:\nConfidence (high / medium / low):",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:37:35.030316+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: Identify. Goal: name the tool lying in the foreground of the photo.\nLook only at the foreground tool. Ignore other objects. Do not guess. If you are not sure, write \u201cunclear\u201d.\nReply in this format, one line each:\nTool:\nVisible features:\nAssumptions:\nConfidence (high / medium / low):",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 16.506,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:37:51.710091+00:00"
+    },
+    {
+      "job_id": "5906b7378ddb4f54a21ec090be09da9f",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: identify the tool that is lying in the foreground of the workbench\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:38:48.396950+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "Tape measure.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: identify the tool that is lying in the foreground of the workbench\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 21.84,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:39:10.306494+00:00"
+    },
+    {
+      "job_id": "db05e472c6a34932879a802715b1c692",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: identify the tool that is lying in the foreground of the workbench\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:40:21.867050+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "measuring tape.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: identify the tool that is lying in the foreground of the workbench\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 4,
+      "max_new_tokens": 80,
+      "generation_seconds": 20.531,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:40:42.515431+00:00"
+    },
+    {
+      "job_id": "5c853c435cbe4a74982f5f1548d64d4c",
+      "kind": "vision",
+      "case": "custom",
+      "prompt": "Task: identify the tool that is closest to your camera\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "phase": "custom",
+      "parent_id": null,
+      "requested_at": "2026-11-13T21:41:24.527283+00:00",
+      "comparison_ids": [
+        "1b7a476b3a944fdcb8e871aaa4f39b4d",
+        "f8e2f16fb94842db8999bb6a103afa5b",
+        "ffafcb072b304b09a2dcad35f364f7fd"
+      ],
+      "output": "The tool that is closest to your camera is a measuring tape.",
+      "model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+      "model_revision": "a7da5b986cb59b408707209984f360a5f4ad7e47",
+      "system_prompt": "",
+      "model_input": "Task: identify the tool that is closest to your camera\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+      "image_sha256": "0c0e4365ce25ec9f22daf3bd4d95883bddd9782289ec17fdb7d2b7c4e8b280ff",
+      "image_preprocessing": {
+        "longest_edge": 512,
+        "image_splitting": false
+      },
+      "generated_tokens": 16,
+      "max_new_tokens": 80,
+      "generation_seconds": 33.275,
+      "truncated": false,
+      "decoding": "greedy",
+      "device": "cpu",
+      "live_inference": true,
+      "library_versions": {
+        "torch": "2.8.0+cpu",
+        "transformers": "4.57.1"
+      },
+      "output_constraint": null,
+      "completed_at": "2026-11-13T21:41:57.962967+00:00"
+    }
+  ],
+  "responses": {
+    "analysis": "I tried many options, but even my revised request provides incorrect answer (measuring tape, instead of metal drawing compass)"
+  },
+  "extra": {
+    "draft_signature": "ee5b80d475c824d27185cf142e0dea272dfd4f891e0429ec0d12c016d8d105a1",
+    "upstream_run": "5647dbefa1d54b9a8cb5ed617af9b749"
+  }
+}

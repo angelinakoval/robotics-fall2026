@@ -1,0 +1,14 @@
+{
+  "job_id": "3deb626296434e9193b55aabc0e2fc83",
+  "kind": "vision",
+  "case": "custom",
+  "prompt": "Task: Identify. Goal: name the tool lying in the foreground of the photo.\nLook only at the foreground tool. Ignore other objects. Do not guess. If you are not sure, write \u201cunclear\u201d.\nReply in this format, one line each:\nTool:\nVisible features:\nAssumptions:\nConfidence (high / medium / low):",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:37:35.030316+00:00",
+  "comparison_ids": [
+    "1b7a476b3a944fdcb8e871aaa4f39b4d",
+    "f8e2f16fb94842db8999bb6a103afa5b",
+    "ffafcb072b304b09a2dcad35f364f7fd"
+  ]
+}

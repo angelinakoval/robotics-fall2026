@@ -1,0 +1,29 @@
+{
+  "job_id": "d7e8b302b054470b9c7a8c0b84fc5e21",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "Goal: (11,1). Coordinates are (column, row). Lower row numbers are higher on the map.\nIf your row is 1 and column is less than 7, answer RIGHT.\nIf your column is 7 and row is less than 7, answer DOWN.\nIf your row is 7 and column is less than 11, answer RIGHT.\nIf your column is 11 and row is more than 1, answer UP.\nIf none of these match, move toward row 1.",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T22:53:58.823070+00:00",
+  "comparison_ids": [
+    "4b6201de44e141719d699ff5abc14a9b",
+    "3e971bae922644c4bac3aede2302bb9e",
+    "3cfd0466025d48a0913f0394ff144d37"
+  ],
+  "task": "robot",
+  "robot_state": {
+    "position": [
+      1,
+      7
+    ],
+    "step": 0,
+    "history": [],
+    "finished": false,
+    "goal_reached": false,
+    "first_goal_step": null,
+    "last_feedback": "No previous action.",
+    "last_decision": null
+  },
+  "simulator_contract": "8da30a943bd97ee39237aa05e8e6800fecdecbef3ce692d7d4e48f851679060f"
+}

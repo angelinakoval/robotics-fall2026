@@ -1,0 +1,14 @@
+{
+  "job_id": "db05e472c6a34932879a802715b1c692",
+  "kind": "vision",
+  "case": "custom",
+  "prompt": "Task: identify the tool that is lying in the foreground of the workbench\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it. If you are not able to see the top of the workbench, report \"I am not able to see a workbench\"\nReport in the format: \ntool : [name, or \"unclear\"], \nvisible features: [shape, material, color, part that you can see], \nconfidence level\" [high, medium, low]",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:40:21.867050+00:00",
+  "comparison_ids": [
+    "1b7a476b3a944fdcb8e871aaa4f39b4d",
+    "f8e2f16fb94842db8999bb6a103afa5b",
+    "ffafcb072b304b09a2dcad35f364f7fd"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "job_id": "ffafcb072b304b09a2dcad35f364f7fd",
+  "kind": "vision",
+  "case": "purpose",
+  "prompt": "A robot needs the correct tool for its task. Which object in this image should it pick up?",
+  "phase": "baseline",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:15:32.687537+00:00",
+  "comparison_ids": []
+}

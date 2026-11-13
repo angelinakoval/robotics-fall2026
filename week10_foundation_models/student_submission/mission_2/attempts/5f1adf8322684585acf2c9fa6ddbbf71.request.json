@@ -1,0 +1,14 @@
+{
+  "job_id": "5f1adf8322684585acf2c9fa6ddbbf71",
+  "kind": "vision",
+  "case": "custom",
+  "prompt": "Task: name the tool that is lying in the foreground of the photo\nLook only at the foreground tool. Ignore other object nearby. Do not guess, if you are not sure report it\nReply in the format: detected object : [name, or \"unclear\"], features: [shape, material, color, part that you can see], confidence level [high, medium, low]",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:34:14.748605+00:00",
+  "comparison_ids": [
+    "1b7a476b3a944fdcb8e871aaa4f39b4d",
+    "f8e2f16fb94842db8999bb6a103afa5b",
+    "ffafcb072b304b09a2dcad35f364f7fd"
+  ]
+}

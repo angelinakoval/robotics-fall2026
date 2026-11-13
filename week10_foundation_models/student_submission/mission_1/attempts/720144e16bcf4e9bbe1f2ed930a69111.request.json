@@ -1,0 +1,14 @@
+{
+  "job_id": "720144e16bcf4e9bbe1f2ed930a69111",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. You can navigate to base, shelf or desk, inspect a known object, report observations, or stop. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup. Report its color and whether it looks empty. If you see more than one cup, list their colors and ask which one I mean. If you see none, say \u201cI did not find a cup.\u201d Then go to the desk and stop. You have wheels and a camera only. Do not guess.\nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't [name the action that is beyond your capabilities]\" and do not proceed forward",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T20:56:25.323805+00:00",
+  "comparison_ids": [
+    "7bded86a415b48a5b9bafc99081c6018",
+    "63ee94c5139942edbdb097682e6d1325",
+    "95d42505d4a2451aac6fe10bc10673e1"
+  ]
+}

@@ -1,0 +1,2 @@
+The revised request improved the response. In the original example, the robot reported that the cup is empty. In my version, it reported that the cup is not empty. It couldn't detect the color of the cup and reported "unknown" instead of making it up. 
+One problem is that I ask it to bring a cup, and it didn't report that it can't do that action.

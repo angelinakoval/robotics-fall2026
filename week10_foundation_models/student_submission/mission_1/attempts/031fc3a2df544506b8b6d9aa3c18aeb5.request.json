@@ -1,0 +1,14 @@
+{
+  "job_id": "031fc3a2df544506b8b6d9aa3c18aeb5",
+  "kind": "language",
+  "case": "custom",
+  "prompt": "You are the robot with wheels and camera, you don't have an arm or gripper. You cannot pick up or carry objects. \nTask: go to the shelf and use your camera to look for a cup, grab it and move to the desk. Report its color and whether it looks empty. \nReport in the format:\nCups seen: [number] \nColor: [color, or \u201cunknown\u201d] \nEmpty: [yes / no / unclear]\n\nIf you see more than one cup, ask which one I mean. If there is none, report \u201cI did not find a cup.\u201d \nIf any task is beyond your capabilities, for example grabbing the objects , report about it \"Unfortunately, I can't do this task\u201d and stop",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T23:32:04.596038+00:00",
+  "comparison_ids": [
+    "7bded86a415b48a5b9bafc99081c6018",
+    "63ee94c5139942edbdb097682e6d1325",
+    "95d42505d4a2451aac6fe10bc10673e1"
+  ]
+}

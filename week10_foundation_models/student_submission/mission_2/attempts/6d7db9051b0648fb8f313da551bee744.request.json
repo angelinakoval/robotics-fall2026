@@ -1,0 +1,14 @@
+{
+  "job_id": "6d7db9051b0648fb8f313da551bee744",
+  "kind": "vision",
+  "case": "custom",
+  "prompt": "Task: identify the tool that is the closest one to the table front edge. Provide visible features of that tool that \nReply in the format: detected object : {name the object}, features: {list the features: color, size and etc.}",
+  "phase": "custom",
+  "parent_id": null,
+  "requested_at": "2026-11-13T21:26:27.268166+00:00",
+  "comparison_ids": [
+    "1b7a476b3a944fdcb8e871aaa4f39b4d",
+    "f8e2f16fb94842db8999bb6a103afa5b",
+    "ffafcb072b304b09a2dcad35f364f7fd"
+  ]
+}
