@@ -1,0 +1,6 @@
+{
+  "case": "ambiguous",
+  "phase": "CLARIFY",
+  "message": "Which cup do you mean? Say \"the red cup\" or \"the blue cup\"",
+  "rationale": "When I needed to clarify what cup did I ask for (instructions: which cup do you need? Red or blue), I said \"blue\" several times, but it wasn't recognized. It only moved to confirm, when I said \"the blue cup\""
+}

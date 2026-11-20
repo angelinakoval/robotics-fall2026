@@ -1,0 +1,2 @@
+This activity showed me that it is extremely hard to give voice instructions in exactly the expected form. A slight change of wording can make the robot interpret an instruction incorrectly.
+It was also a little hard to drive the robot, and in Mission 3 I spent quite some time finding the right position to pass the cup to the person.
